@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>BLONDEVENT</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- thanks -->
+        <div class="thanks">
+            <div class="container">
+                <div class="thanks-header">
+                    <div class="thanks-logo"><a href="#"><img src="images/logo.png" alt="" width="120" height="34" /></a></div>
+                    <div class="thanks-organizer"><img src="images/organizer.png" alt="" width="97" height="50" /></div>
+                </div>
+                <div class="thanks-title">Уважаемая Katherina Wella,</div>
+                <div class="thanks-text">Спасибо за регистрацию, мы&nbsp;свяжемся с вами в&nbsp;ближайшее время!</div>
+                <div class="thanks-address">
+                    <p>Мероприятие состоится 3 июня 2017 года, в 19:00</p>
+                    <p>По адресу: Москва, Родчельская улица 15, стр. 1 <a href="#" class="thanks-address-link"></a></p>
+                </div>
+
+                <div class="thanks-links">
+                    <div class="thanks-link-share">www.blnd.prt/xsdf</div>
+                    <button class="copy-button" data-clipboard-text="www.blnd.prt/xsdf" title="Скопировать в буфер обмена"></button>
+                    <script src="js/clipboard.min.js"></script>
+                    <script>
+                        var clipboard = new Clipboard('.copy-button');
+                        clipboard.on('success', function(e) {
+                            alert('Ссылка скопирована в буфер');
+                        });
+                    </script>
+
+                    <div class="thanks-social">
+                        <span id="ya_share_counter"></span>
+                        <script src="http://yandex.st/share/share.js"></script>
+                        <script>
+                            var yaShareCounter = new Ya.share({
+                                'element': 'ya_share_counter',
+                                'theme': 'counter',
+                                'elementStyle': {'quickServices': ['vkontakte', 'facebook', 'twitter'], 'type': 'small'}
+                             });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="thanks-hint">Отправьте эту ссылку друзьям и подругам или поделитесь в соц. сетях, если хотите, чтобы они тоже получили призы</div>
+            </div>
+        </div>
+        <!-- thanks END -->
+
+    </body>
+</html>
