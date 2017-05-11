@@ -14,7 +14,13 @@ $(document).ready(function() {
 
     $('input.maskPhone').mask('+7 (999) 999-99-99');
 
-    $('form').validate();
+    $('form').validate({
+        ignore: '',
+        invalidHandler: function(form, validatorcalc) {
+            validatorcalc.showErrors();
+            checkErrors();
+        }
+    });
 
     $('.form-input input').each(function() {
         if ($(this).val() != '') {
@@ -32,4 +38,40 @@ $(document).ready(function() {
         }
     });
 
+});
+
+function checkErrors() {
+    $('.form-checkbox').each(function() {
+        var curField = $(this);
+        if (curField.find('input.error').length > 0) {
+            curField.addClass('error');
+        } else {
+            curField.removeClass('error');
+        }
+    });
+}
+
+$(window).on('load resize scroll', function() {
+    if ($('.colorists-header').length > 0) {
+        var curScroll = $(window).scrollTop();
+        var curHeight = $(window).height();
+        if ($('.colorists-header').offset().top - curScroll <= 0) {
+            if (($('.location').offset().top - $('.colorists-header').height()) - curScroll <= 0) {
+                $('.colorists-header').removeClass('fixed');
+            } else {
+                $('.colorists-header').addClass('fixed');
+            }
+        } else {
+            $('.colorists-header').removeClass('fixed');
+        }
+        if ($('.colorists-list').offset().top - curHeight - 75 - curScroll <= 0) {
+            if ($('.location').offset().top - (curScroll + curHeight) <= 0) {
+                $('.tags').hide();
+            } else {
+                $('.tags').show();
+            }
+        } else {
+            $('.tags').hide();
+        }
+    }
 });
