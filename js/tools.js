@@ -38,6 +38,11 @@ $(document).ready(function() {
         }
     });
 
+    $('.thanks-link-share').click(function(e) {
+        $('.copy-button').click();
+        e.preventDefault();
+    });
+
 });
 
 function checkErrors() {
