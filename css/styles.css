@@ -25,11 +25,13 @@ img {border:none}
 .welcome {position:relative; height:800px; background:#f5f1ee url(../images/welcome-bg.jpg) no-repeat center top}
 
 @media screen and (max-width:1199px) {
-    .welcome {height:1450px; background:#f5f1ee url(../images/welcome-bg-tablet.jpg) no-repeat center top; background-size:100% auto}
+    .welcome {height:auto; background:#f5f1ee url(../images/welcome-bg-tablet.jpg) no-repeat center top; background-size:100% auto}
+    .welcome:after {content:""; display:block; width:614px; height:694px; background:url(../images/welcome-bg-girl-tablet.png); margin:47px auto 0 auto}
 }
 
 @media screen and (max-width:767px) {
-    .welcome {height:1400px; background:#f5f1ee url(../images/welcome-bg-mobile.jpg) no-repeat center bottom; background-size:100% auto}
+    .welcome {background:#f5f1ee url(../images/welcome-bg-mobile.jpg) no-repeat center bottom; background-size:100% auto}
+    .welcome:after {width:413px; height:468px; background:url(../images/welcome-bg-girl-mobile.png); margin:47px auto 0 auto}
 }
 
 .welcome-header {height:154px}
@@ -44,6 +46,16 @@ img {border:none}
 
 @media screen and (max-width:767px) {
     .welcome-logo {top:950px; right:55px}
+}
+
+.welcome-logo-mobile {display:none}
+
+@media screen and (max-width:1199px) {
+    .welcome-logo-mobile {display:block; line-height:0; position:absolute; right:100px; top:59px}
+}
+
+@media screen and (max-width:767px) {
+    .welcome-logo-mobile {right:55px; top:84px}
 }
 
 .welcome-city {float:left; font:15px/25px BodoniCyrillic, serif; padding:70px 0 0 80px}
@@ -65,30 +77,34 @@ img {border:none}
 }
 
 @media screen and (max-width:1199px) {
+    .welcome-organizer {padding:50px 0 0 0}
+}
+
+@media screen and (max-width:767px) {
     .welcome-organizer {padding:79px 0 0 0}
 }
 
 .welcome-title {max-width:670px; font:75px/75px BodoniCyrillic, serif; text-transform:uppercase; padding:33px 0 0 0}
 
 @media screen and (max-width:1199px) {
-    .welcome-title {font-size:70px; margin:0 -50px 0 0; max-width:none; padding:27px 0 0 0}
+    .welcome-title {font-size:70px; margin:0 -50px 0 0; max-width:none; padding:11px 0 0 0}
 }
 
 @media screen and (max-width:767px) {
-    .welcome-title {font-size:50px; margin:0; line-height:50px; padding:72px 0 0 0}
+    .welcome-title {font-size:50px; margin:0; line-height:50px; padding:46px 0 0 0}
 }
 
 .welcome-anonce {font-size:28px; line-height:38px; max-width:570px; text-transform:uppercase; padding:30px 0 0 0}
 .welcome-anonce span {color:#ca9879}
 
 @media screen and (max-width:767px) {
-    .welcome-anonce {font-size:20px; line-height:25px; padding:48px 0 0 0}
+    .welcome-anonce {font-size:20px; line-height:25px; padding:38px 0 0 0}
 }
 
 .welcome-text {max-width:600px; padding:61px 0 0 0}
 
 @media screen and (max-width:767px) {
-    .welcome-text {padding:37px 0 0 0}
+    .welcome-text {padding:27px 0 0 0}
 }
 
 .welcome-link {padding:51px 0 0 0}
@@ -99,7 +115,7 @@ img {border:none}
 .welcome-link span:after {content:""; display:block; width:0; height:0; position:absolute; left:-10px; top:0; border-right:10px solid #d2c2b5; border-top:18px solid transparent; border-bottom:18px solid transparent}
 
 @media screen and (max-width:767px) {
-    .welcome-link {padding:63px 0 0 0}
+    .welcome-link {padding:53px 0 0 0}
     .welcome-link a {float:none; display:block; margin:0 auto; width:370px; background:url(../images/welcome-link-mobile.png)}
     .welcome-link span {float:none; display:block; margin:0; padding:19px 0 0 0; height:auto; color:#231f20; background:none; text-align:center}
     .welcome-link span:after {display:none}
@@ -108,7 +124,7 @@ img {border:none}
 .welcome-address {font-size:18px; padding:30px 0 0 0}
 
 @media screen and (max-width:767px) {
-    .welcome-address {padding:43px 0 0 0}
+    .welcome-address {padding:33px 0 0 0}
 }
 
 .welcome-dress {font:14px/25px GothamPro, sans-serif; text-transform:uppercase; color:#c19072; padding:2px 0 0 0}
