@@ -404,7 +404,7 @@ label.error {display:block; position:absolute; right:100%; top:0; white-space:no
 .thanks-hint {max-width:470px; font-size:15px; color:#ca9879; padding:25px 0 50px 0}
 
 .city {position:relative; min-height:100%; overflow:hidden}
-.city-page {background:#f5f1ee url(../images/city-bg.jpg) no-repeat center top; background-size:100% auto}
+.city-page {background:#f5f1ee url(../images/city-bg.jpg) no-repeat center top; background-size:cover}
 
 @media screen and (max-width:1199px) {
     .city-page {background:#f5f1ee url(../images/city-bg-tablet.jpg) no-repeat center top; background-size:100% auto}
