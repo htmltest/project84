@@ -45,7 +45,7 @@ img {border:none}
 }
 
 @media screen and (max-width:767px) {
-    .welcome-logo {top:950px; right:55px}
+    .welcome-logo {top:927px; right:55px}
 }
 
 .welcome-logo-mobile {display:none}
@@ -82,6 +82,16 @@ img {border:none}
 
 @media screen and (max-width:767px) {
     .welcome-organizer {padding:79px 0 0 0}
+}
+
+.welcome-hairdays {position:absolute; right:15px; top:173px; line-height:0}
+
+@media screen and (max-width:1199px) {
+    .welcome-hairdays {top:955px; right:100px}
+}
+
+@media screen and (max-width:767px) {
+    .welcome-hairdays {top:1033px; right:55px}
 }
 
 .welcome-title {max-width:670px; font:75px/75px BodoniCyrillic, serif; text-transform:uppercase; padding:33px 0 0 0}
