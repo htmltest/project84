@@ -43,6 +43,18 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.drop_down_link').click(function(e) {
+        e.preventDefault();
+    });
+
+    $('.menu_button').click(function() {
+        $('html').toggleClass('mobile-menu-open');
+    });
+
+    $('.close_btn').click(function() {
+        $('html').removeClass('mobile-menu-open');
+    });
+
 });
 
 function checkErrors() {
@@ -79,4 +91,10 @@ $(window).on('load resize scroll', function() {
             $('.tags').hide();
         }
     }
+
+    if ($(window).scrollTop() > 0) {
+        $('header').addClass('fixed')
+    } else {
+        $('header').removeClass('fixed');
+	}
 });

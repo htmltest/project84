@@ -534,3 +534,107 @@ label.error {display:block; position:absolute; right:100%; top:0; white-space:no
     .text-container {margin:0}
     .text-content h1 {font-size:28px; line-height:38px}
 }
+
+.event {min-height:100%; position:relative}
+.event-inner {padding:0 0 175px 0}
+
+header {position:fixed; left:0; top:0; right:0; z-index:100; white-space:nowrap; transition:all 0.3s ease 0s; padding:27px 0 7px 0}
+header.fixed {box-shadow:0 0 20px rgba(0, 0, 0, .2); background:rgba(243, 231, 218, 1); padding-top:6px}
+.logo {float:left; width:128px; margin:6px 0 0 0}
+.logo img {display:block; width:100%}
+
+.menu {float:left; font:16px/25px GothamPro, sans-serif; text-transform:uppercase; margin:34px 0 0 110px}
+.menu_list {margin:0; padding:0; list-style:none}
+.menu_list li {float:left; margin:0 16px; padding:0; position:relative}
+.menu_list li:hover .drop_down {display:block}
+.menu_list a {transition:all 0.3s ease 0s; color:#000; text-decoration:none}
+.menu_list a:hover {color:#b2957d}
+.menu_list b {font-weight:normal; font-family:GothamProBold, sans-serif}
+.drop_down {display:none; font-size:14px; left:0; padding-top:10px; position:absolute; top:100%; z-index:20}
+.drop_down ul {margin:0; list-style:none; background:rgba(255, 255, 255, 0.75); border-top:5px solid #b2957d; padding:15px 39px 10px 25px}
+.drop_down li {float:none; display:block; margin:0 0 8px 0; text-transform:none; padding:0}
+.drop_down a {padding:2px 0}
+
+.social {float:right; margin:32px 0 0 0}
+.social a {display:inline-block; vertical-align:middle; margin-left:2px; text-decoration:none; color:#000}
+.social .sitefont {font-size:22px}
+
+.menu_button {float:right; width:40px; height:30px; position:relative; margin:28px 0 0 20px; cursor:pointer; display:none}
+.menu_button .mnu_btn_line {height:3px; position:absolute; top:50%; margin-top:-1.5px; left:0; width:100%; background-color:#000; border-radius:2px}
+.menu_button:before,
+.menu_button:after {position:absolute; display:block; content:""; width:100%; height:3px; border-radius:2px; left:0; background-color:#000}
+.menu_button:before {top:0}
+.menu_button:after {bottom:0}
+
+.close_btn {position:fixed; font-size:200px; right:55px; top:55px; cursor:pointer; display:none; z-index:200}
+.close_btn .close_btn_line {height:30px; width:30px; position:relative}
+.close_btn .close_btn_line:before,
+.close_btn .close_btn_line:after {position:absolute; display:block; content:""; height:2px; width:36px; background-color:#000; top:14px; left:-3px}
+.close_btn .close_btn_line::before {transform:rotate(45deg)}
+.close_btn .close_btn_line::after {transform:rotate(-45deg)}
+
+@media screen and (max-width:991px) {
+    header {position:absolute; background:transparent}
+    header.fixed {box-shadow:none; background:transparent; padding-top:27px}
+    .menu {overflow:auto; position:fixed; float:none; top:0; left:0; right:0; bottom:0; margin:0; background-color:#c5a890; z-index:100; display:none}
+    .mobile-menu-open .menu {display:block}
+    .menu_button {display:block}
+    .menu_list {width:100%; position:relative; top:50%; transform:translateY(-50%)}
+    .menu_list li {float:none; display:block; margin:4px auto; width:300px; text-align:center}
+    .menu_list li:last-child a {border-bottom:1px solid #000; padding-bottom:3px}
+    .menu_list a {border-top:1px solid #000; padding-top:3px; display:block}
+    .drop_down {display:none; position:relative; padding:3px 0 0}
+    .drop_down ul {border-top:1px solid #000; padding:4px 0 0; background-color:transparent}
+    .drop_down li {width:auto; margin:0 20px}
+    .drop_down li:last-child a {border-bottom:none}
+    .drop_down li:first-child a {border-top:none}
+    .mobile-menu-open .close_btn {display:block}
+}
+
+.event-header {height:672px; background:url(../images/event-header.png) no-repeat center top}
+.event-header-title {max-width:670px; text-transform:uppercase; font:60px/75px BodoniCyrillic, serif; padding:287px 0 0 0}
+.event-header-subtitle {max-width:670px; text-transform:uppercase; font-size:28px; line-height:38px; padding:6px 0 0 0}
+
+@media screen and (max-width:991px) {
+    .event-header {height:830px; background:url(../images/event-header-mobile.png) no-repeat center bottom; text-align:center}
+    .event-header-title {max-width:none; font-size:40px; line-height:45px; padding:188px 0 0 0}
+    .event-header-subtitle {max-width:none; padding:31px 0 0 0}
+}
+
+.event-text {padding:64px 200px 0 200px; color:#5d595a}
+.event-text-pre {font:25px/50px BodoniCyrillic, serif; text-transform:uppercase; color:#231f20}
+.event-text h1 {font:45px/50px BodoniCyrillic, serif; text-transform:uppercase; margin:19px 0 44px 0; padding:0; color:#231f20}
+.event-text img {box-sizing:border-box}
+.event-text p {margin:25px 0; padding:0}
+.event-text a {color:#ca9879; text-decoration:none}
+.event-text a:hover {text-decoration:underline}
+.event-text blockquote {margin:60px 0; padding:0; font-size:28px; line-height:38px; color:#5d595a}
+
+@media screen and (max-width:991px) {
+    .event-text {padding:92px 0 0 0}
+    .event-text-pre {font-size:20px; line-height:25px}
+    .event-text h1 {font-size:34px; line-height:38px; margin:20px 0 69px 0}
+}
+
+.event-img-wide {width:calc(100% + 100px); margin-left:-50px}
+.event-img-left {float:left; clear:left; margin:6px 30px 18px -230px}
+.event-img-left-2 {float:left; clear:left; margin:6px 30px 18px -130px}
+.event-img-right {float:right; clear:right; margin:6px -230px 18px 30px}
+
+@media screen and (max-width:991px) {
+    .event-img-wide {width:calc(100% + 110px); margin-left:-55px}
+    .event-img-left {float:none; clear:none; display:block; margin:50px 0; width:100%}
+    .event-img-left-2 {float:none; clear:none; display:block; margin:50px 0; width:100%}
+    .event-img-right {float:none; clear:none; display:block; margin:50px 0; width:100%}
+}
+
+.event+.footer {margin-top:-175px; position:relative}
+.event+.footer .container:before {content:""; display:block; position:absolute; left:15px; top:-1px; right:15px; height:1px; background:#faf4f1}
+
+@media screen and (max-width:1199px) {
+    .event+.footer .container:before {left:100px; right:100px}
+}
+
+@media screen and (max-width:767px) {
+    .event+.footer .container:before {left:55px; right:55px}
+}
